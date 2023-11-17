@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <script src="script.js"></script>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,52 +12,51 @@
     <header>
         
         <section id="cabecalho">
-            <a href="index.html#cabecalho" class="itens">Ecosol</a>
-            <a href="index.html#apresentacao" class="itens">Home </a>
-            <a href="index.html#tituloServico" class="itens">Serviços </a>
-            <a href="index.html#tituloContato" class="itens">Contato </a>
-            <a href="orcamento.html" class="itens">Orçamento </a>
+            <img id="logo" src="Images\PortalLogo.png">
         </section>
 
     </header>
     
     <body id="body">
        <div id="corpo">
-            <h1>Faça seu orçamento!</h1>
+            <h1>Recadastramento de moradores e proprietários</h1>
             <p>Conheça nossos planos de financiamento!</p>
 
             <form id="form">
-                <label class="margem2" for="nome">NOME</label><br>
-                <input class="caixa" type="text" id="nome" name="nome"required><br>
+                <label class="margem2" for="nome">NOME COMPLETO</label><br>
+                <input class="caixa" type="text" id="nome" name="nome"><br>
 
                 <label class="margem2" for="email">EMAIL</label><br>
-                <input class="caixa" type="email" id="email" name="email" required><br>
+                <input class="caixa" type="email" id="email" name="email" ><br>
 
-                <label class="margem2" for="estado">ESTADO</label><br>
-                <select id="estado">
+                <label class="margem3" for="numero">NUMERO</label><br>
+                <input class="caixa" type="number" id="numero" name="numero"><br>
+
+                <label class="margem2" for="pripriedade">PROPRIEDADE</label><br>
+                <select name="propriedade" id="propriedade">
                     <option value="">Selecione</option>
-                    <option value="SP">SP</option>
-                    <option value="RJ">RJ</option>
-                    <option value="PR">PR</option>
+                    <option value="Proprietario">Proprietario</option>
+                    <option value="Locador">Locador</option>
+                    <option value="Outros">Outros</option>
                 </select>
                 
-                <label class="margem3" for="nome">QUAL O TIPO DO PROJETO?</label><br>
+                <label class="margem3" for="nome">RELACIONADO A MORADIA:</label><br>
                 <select id="projeto">
                     <option value="">Selecione</option>
-                    <option value="Residencial">Residencial</option>
-                    <option value="Condominio">Condominio</option>
-                    <option value="Empresas">Empresas</option>
+                    <option value="Residencial">Responsável pelo imóvel</option>
+                    <option value="Condominio">Conjugue (do responsável)</option>
+                    <option value="Empresas">Filho / Filha (do responsável)</option>
+                    <option value="Empresas">Parente (Pai, Mãe, sogro, sogra, tio, tia, irmão, etc do responsável)</option>
                 </select>
-                <label class="margem3" for="valor">VALOR MEDIO DE ENERGIA?</label><br>
-                <input class="caixa" type="number" id="valor" name="valor" required><br>
+                
 
-                <input class="enviar" type="submit" value="Entrar em contato">
+                <input onclick="enviarDados()" class="enviar" value="Entrar em contato">
             </form>
 
         </div>
 
     </body>
     <footer id="rodape">
-        <p class="itens">Ecosol - 2023</p>
+        <p class="itens">Portal de Itu - 2023</p>
     </footer>
 </html>
